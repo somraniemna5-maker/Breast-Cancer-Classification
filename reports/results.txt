@@ -1,0 +1,30 @@
+Dimensions : (569, 32)
+Valeurs manquantes : 0
+
+Répartition des classes :
+ diagnosis
+bénin    357
+malin    212
+Name: count, dtype: int64
+
+--- Validation croisée (5 plis) ---
+Régression logistique    AUC CV = 0.996 ± 0.005
+KNN                      AUC CV = 0.988 ± 0.008
+SVM (RBF)                AUC CV = 0.996 ± 0.005
+Random Forest            AUC CV = 0.989 ± 0.009
+
+=== Meilleur modèle : Régression logistique ===
+              precision    recall  f1-score   support
+
+       malin       0.98      0.98      0.98        42
+       bénin       0.99      0.99      0.99        72
+
+    accuracy                           0.98       114
+   macro avg       0.98      0.98      0.98       114
+weighted avg       0.98      0.98      0.98       114
+
+AUC test : 0.995
+
+Top 5 variables : worst smoothness, worst concave points, area error, radius error, worst area
+
+Figures enregistrées dans reports/figures/
